@@ -1,0 +1,118 @@
+/* Reset some basic elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("/src/background.jpg"); /* Add your background image */
+  background-size: cover;
+  background-position: center;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+/* Centered and contained box with blur */
+.container {
+  background: rgba(255, 255, 255, 0.15); /* Slightly transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Shadow for better look */
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Heading styling */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%; /* Full width */
+  padding: 0.75rem; /* Better padding */
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f4f4f9; /* Light background for input */
+  color: #333;
+  margin-bottom: 1rem;
+  transition: border 0.3s ease;
+}
+
+/* Input focus effect */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border: 2px solid #4caf50; /* Green border on focus */
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.button-group div {
+  background-color: #4caf50;
+  color: #f4f4f9;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none; /* Removes default border */
+  transition: background-color 0.3s ease;
+}
+
+.button-group div:hover {
+  background-color: #388e3c;
+}
+
+/* Button styling */
+button {
+  width: 100%; /* Full width for button */
+  padding: 0.75rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wholesaler Crop Investment</title>
+    <link rel="stylesheet" href="/styles2.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Form</h1>
+        <p id=typed-text style="display: flex; justify-content: center; align-items: center;"></p>
+        <form id="form" action="/form" method="POST">
+
+            <div class="radiobtn" style="
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 30px; 
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+">
+
+                <!-- Farmer Option -->
+                <div style="
+        display: flex; 
+        align-items: center; 
+        gap: 10px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        border: 2px solid #ddd;
+    " onmouseover="this.style.backgroundColor='#e0ffe0';" onmouseout="this.style.backgroundColor='';">
+                    <input type="radio" name="userType" id="farmer_radio" style="transform: scale(1.3);" value="farmer">
+                    <label for="farmer_radio" style="font-size: 18px; font-weight: 600;">Farmer</label>
+                </div>
+
+                <!-- Wholesaler Option -->
+                <div style="
+        display: flex; 
+        align-items: center; 
+        gap: 10px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        border: 2px solid #ddd;
+    " onmouseover="this.style.backgroundColor='#e0f7ff';" onmouseout="this.style.backgroundColor='';">
+                    <input type="radio" name="userType" id="wholesaler_radio" style="transform: scale(1.3);"
+                        value="wholesaler">
+                    <label for="wholesaler_radio" style="font-size: 18px; font-weight: 600;">Wholesaler</label>
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Full name" autocomplete="off" required
+                    style="padding: .7rem .6rem; width: 100%; margin-bottom: .8rem;">
+                <input type="email" id="email" name="email" placeholder="email" autocomplete="off" required
+                    style="padding: .7rem .6rem; width: 100%; margin-bottom: .8rem;">
+                <input type="number" id="investment" name="investment" placeholder="investment (in rupess)" required
+                    autocomplete="off">
+            </div>
+
+            <!-- Crop Checkboxes -->
+            <div class="form-group">
+                <label for="crops">Select Crops:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="cropname" value="Wheat"> Wheat</label>
+                    <label><input type="checkbox" name="cropname" value="Rice"> Rice</label>
+                    <label><input type="checkbox" name="cropname" value="Corn"> Corn</label>
+                    <label><input type="checkbox" name="cropname" value="Soybeans"> Soybeans</label>
+                    <label><input type="checkbox" name="cropname" value="Barley"> Barley</label>
+                    <!-- Add Other Option -->
+                    <input type="text" id="otherCrop" name="cropname" placeholder="Other crops" autocomplete="off">
+                </div>
+            </div>
+
+            <!-- Comments -->
+            <div class="form-group">
+                <label for="comments">About me:</label>
+                <textarea name="aboutme" id="comments" rows="4" placeholder="Any additional details..." required
+                    autocomplete="off"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const text = "Let us know you."
+            let index = 0;
+
+            function typeEffect() {
+                if (index < text.length) {
+                    document.getElementById("typed-text").innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(typeEffect, 50); // Speed of typing (adjustable)
+                }
+            }
+
+            typeEffect();
+        });
+    </script>
+</body>
+
+</html>

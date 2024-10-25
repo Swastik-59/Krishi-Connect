@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10 px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #2E7D32;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo Styling */
+.logo a {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #1B5E20;
+    color: #FFC107;
+    border-radius: 5px;
+}
+
+/* Call to Action Buttons in Navbar */
+.cta-btn-nav {
+    background-color: #FFC107;
+    color: #2E7D32;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-btn-nav:hover {
+    background-color: #FFD54F;
+    color: #1B5E20;
+}
+
+/* Different style for Login button */
+.cta-btn-nav.login {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #FFC107;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-btn-nav.login:hover {
+    background-color: #FFC107;
+    color: #2E7D32;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #2E7D32;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active + .nav-links {
+        display: flex;
+    }
+}
+
+
+.logo {
+    font-size: 32px;
+}
+
+
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn, .signup-btn {
+    background-color: #fff;
+    color: #4CAF50;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.signup-btn {
+    background-color: #FFC107;
+}
+
+/* Banner Section */
+.banner {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+/* Background Video Styling */
+.banner-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Ensure the video stays behind the text */
+}
+
+/* Overlay Text */
+.banner-text {
+    position: relative;
+    z-index: 1; /* Ensure text is on top of the video */
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.banner-text h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    background-color: #FFC107;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+/* About Section */
+.about {
+    background-color: black;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    margin-right:80px;
+}
+
+#typed-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+    margin-top: 20px;
+    white-space: pre-wrap; /* To handle multi-line typing */
+}
+.obj {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.objectives-container {
+    background: linear-gradient(90deg, #C1FF72, #FDF58A);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.objectives-container h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.objectives-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Each objective box */
+.objective-box {
+    flex: 1;
+    max-width: 200px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for the box */
+.objective-box:hover {
+    background-color: rgba(255, 255, 255, 0.15); /* Lighten the transparency on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.objective img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    margin-bottom: 2vw;
+}
+
+.objective p {
+    font-size: 0.95rem;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for the text */
+.hover-text:hover {
+    color: #ff6600; /* Change text color on hover */
+}
+
+@media (max-width: 768px) {
+    .objectives-wrapper {
+        flex-direction: column;
+    }
+
+    .objective-box {
+        margin-bottom: 20px;
+    }
+}
+/* Footer Section */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}

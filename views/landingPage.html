@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Krishi Connect</title>
+    <link rel="stylesheet" href="/styles1.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#">KrishiConnect</a>
+            </div>
+
+            <!-- Menu Items -->
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="/signup.html" class="cta-btn-nav login">Sign Up</a></li>
+            </ul>
+
+            <!-- Hamburger Icon for Mobile View -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Banner Section -->
+    <section class="banner">
+        <div class="banner-video-container">
+            <!-- Background Video -->
+            <video autoplay muted loop id="background-video">
+                <source src="/src/vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Overlay Text -->
+        <div class="banner-text">
+            <h2>Connecting Farmers and Wholesalers</h2>
+            <p>Empowering agriculture with digital infrastructure</p>
+
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About KrishiConnect</h2>
+            <p id="typed-text"></p> <!-- This will be dynamically typed -->
+        </div>
+    </section>
+    <div class="obj"></div>
+
+    <div class="objectives-container">
+        <h1>Objectives of KrishiConnect</h1>
+        <div class="objectives-wrapper">
+            <div class="objective-box">
+                <div class="objective">
+                    <img src="/src/gtr.jpg" alt="User-Friendly Interface for Farmers">
+                    <p class="hover-text">Design an intuitive and visually appealing interface tailored to farmers’
+                        needs, enhancing usability and engagement.</p>
+                </div>
+            </div>
+
+            <div class="objective-box">
+                <div class="objective">
+                    <img src="/src/jfg.jpg" alt="Efficient Crop Guidance">
+                    <p class="hover-text">Provide farmers with AI-based insights to determine the best crops to grow
+                        based on weather conditions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="objective-box">
+                <div class="objective">
+                    <img src="/src/yu.jpg" alt="Weather-Driven Decision Making">
+                    <p class="hover-text">Use real-time weather data to help farmers plan and manage their agricultural
+                        activities effectively.
+                    </p>
+                </div>
+            </div>
+
+            <div class="objective-box">
+                <div class="objective">
+                    <img src="/src/uhg.jpg" alt="Farmer-Wholesaler Connectivity">
+                    <p class="hover-text">Facilitate direct communication between farmers and wholesalers, reducing the
+                        dependency on middlemen. </p>
+                </div>
+            </div>
+
+            <div class="objective-box">
+                <div class="objective">
+                    <img src="/src/juhg.jpg" alt="Multilingual Support">
+                    <p class="hover-text">Enable users to access the platform in multiple languages, making it inclusive
+                        for farmers across various regions. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 KrishiConnect. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const text = "KrishiConnect is a digital platform designed to bring farmers and wholesalers together on a common platform. Our mission is to empower the agricultural community by making it easier for farmers to sell their produce and for wholesalers to procure fresh, high-quality crops directly from the source.\n\nWith the help of technology and data-driven insights, KrishiConnect offers a machine learning-based crop recommendation system that advises farmers on which crops to grow based on their soil type, weather conditions, and other environmental factors. This ensures optimized yield and maximum profitability for farmers while minimizing resource wastage.";
+            let index = 0;
+
+            function typeEffect() {
+                if (index < text.length) {
+                    document.getElementById("typed-text").innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(typeEffect, 15); // Speed of typing (adjustable)
+                }
+            }
+
+            typeEffect();
+        });
+    </script>
+</body>
+
+</html>
